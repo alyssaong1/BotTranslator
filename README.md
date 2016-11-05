@@ -1,0 +1,4 @@
+# Demo of Bot Translation middleware
+The user's utterances passes through the Bot middleware, which uses the Translator Text API to translate into any language you want. This feature used to be available in Bot Framework v1.0, but was removed in v3.0. The reason for doing this is that LUIS currently does not support all languages, so a workaround is to convert the user's utterance into a supported language, then feed that into LUIS to determine the user's intent. This sample I have written converts simplified chinese into english using the bot middleware.
+
+[DEMO](https://bottranslationdemo.azurewebsites.net) - if you know simplified chinese you can try it out

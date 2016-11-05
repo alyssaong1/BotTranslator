@@ -1,0 +1,14 @@
+{
+  "name": "translationbot",
+  "version": "1.0.0",
+  "description": "Translation test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Alyssa Ong",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^4.2.0"
+  }
+}
