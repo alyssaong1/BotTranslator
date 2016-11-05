@@ -1,0 +1,668 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "ServiceBot",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "GetFoodPlaces"
+    },
+    {
+      "name": "GetHelp"
+    },
+    {
+      "name": "GetLocation"
+    },
+    {
+      "name": "GetOpeningHours"
+    },
+    {
+      "name": "GetPrice"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "PersonType"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [
+    "datetime"
+  ],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "PeopleType",
+      "mode": true,
+      "words": "child,children,adult,elder,kids",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "the sky is blue",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what can i eat here?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "what times are you open this week",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "what's there to eat?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "where's this?",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "what are your operating hours",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "eateries",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "food",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "where is the zoo?",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "opening time",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "closing time",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "what restaurants are there",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "when do you shut",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "when are you open",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "opening hours",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "i want food",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "GetHelp",
+      "entities": []
+    },
+    {
+      "text": "get assistance",
+      "intent": "GetHelp",
+      "entities": []
+    },
+    {
+      "text": "get help",
+      "intent": "GetHelp",
+      "entities": []
+    },
+    {
+      "text": "i need assistance",
+      "intent": "GetHelp",
+      "entities": []
+    },
+    {
+      "text": "is there anything to eat here?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "i'm hungry",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i love you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "you're great",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what the heck",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i like trains",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "omg wow",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "the quick brown fox jumps over the lazy dog",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "my mum said i'm awesome",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i wanna eat",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "what's your name?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i think life is great",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you take me out of here",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what kind of thing is this",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hahhahahahaa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "so funny",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sadfs sadfdsa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "address",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "area",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "what place is this",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "what is this area",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "where's this",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "can you tell me the place",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "give me the address",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "show me where",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "hello there",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the entry fee for 3 adults",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "how much is it for a child",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "how much is the entry fee",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "cost for 5 adults",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "how much is the entry fee for 4 people",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "price for 3 people",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "entrance fee for 7 people",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "entrance fee",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "cost of entry",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "how much to enter",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "entry fee for 4 kids",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "adult entry fee",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "child entry fee",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "entry fee for kids",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "how much for children to enter",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "children entrance fee",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "child entrance fee",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "what is the price for children",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "what's the price for adults",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "cost of entrance fee for kids",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "how much does it cost for a child to enter?",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "are you open on sundays?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "are you open on weekdays?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "what time do you shut on weekdays?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "are you open on christmas?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "normal business hours",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "business hours",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "september 11 open?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "are you open on monday?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "how much entrance fee?",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "i'm really hungry",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "idiot",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "small entry fees?",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "adult entry fee cost?",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "child entrance fee?",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "how much is it to enter?",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "adult entry fee?",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "hi there",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "entry fees?",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "how much is adult?",
+      "intent": "GetPrice",
+      "entities": [
+        {
+          "entity": "PersonType",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i am so hungry, what can i eat?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "where is the food?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    },
+    {
+      "text": "dialogs\\dialogaction.js:38:19)",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "your business today?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "your normal business tomorrow?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "september 11 2018 you open?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "how many adults?",
+      "intent": "GetPrice",
+      "entities": []
+    },
+    {
+      "text": "when you turn off?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "where in your region?",
+      "intent": "GetLocation",
+      "entities": []
+    },
+    {
+      "text": "normal business hours?",
+      "intent": "GetOpeningHours",
+      "entities": []
+    },
+    {
+      "text": "do you have food?",
+      "intent": "GetFoodPlaces",
+      "entities": []
+    }
+  ]
+}
