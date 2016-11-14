@@ -8,7 +8,7 @@ var token = "";
 var tokeninterval;
 var TRANSLATIONKEY = process.env.TRANSLATION_KEY; // Replace this with your translation key as a string
 
-// Naive implementation. Token generation should probably happen separate from the bot web service.
+// Put this in a separate web job if deploying to production, otherwise fine for development
 // Why I used setTimeout and not setInterval: http://www.thecodeship.com/web-development/alternative-to-javascript-evil-setinterval/
 function getToken() {
     // do shit here
