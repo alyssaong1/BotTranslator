@@ -1,13 +1,13 @@
-# Translation Middleware for Microsoft Bot Framework
-The user's utterances passes through the Bot middleware, which uses the Translator Text API to translate into any language you want. This feature used to be available in Bot Framework v1.0, but was removed in v3.0. The reason for doing this is that LUIS currently does not support all languages, so a workaround is to convert the user's utterance into a supported language, then feed that into LUIS to determine the user's intent. This sample I have written converts simplified chinese into english using the bot middleware.
+# Language translator for Microsoft Bot Framework
+This code sample uses Microsoft's Translator API to translate the user's utterance into any language you want, and then pass it into LUIS for natural language processing (now available in both Nodejs and C#). The reason for doing this is that LUIS currently does not support all languages, so a workaround is to convert the user's utterance into a supported language, then feed that into LUIS to determine the user's intent. This sample converts simplified chinese into english using the bot middleware.
 
 ### [DEMO](http://bottranslationdemo.azurewebsites.net/) - if you know simplified chinese you can try it out
 
-I made the bot reply in English as well just for reference for non-chinese speakers. 
+The bot replies in English as well just for reference for non-chinese speakers. 
 
 ### What can this sample bot do?
 
-The bot is a generic service bot I built for testing (imagine a bot for a theme park scenario). You can ask for the following in Chinese:
+The bot is a generic customer service bot. You can ask for the following in Chinese:
 
 - Get help menu
 - Ask if there's food
