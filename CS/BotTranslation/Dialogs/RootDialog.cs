@@ -5,23 +5,56 @@ using Microsoft.Bot.Connector;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using System.Text.RegularExpressions;
+using Microsoft.Bot.Builder.FormFlow;
 
 namespace BotTranslation.Dialogs
 {
     [Serializable]
-    [LuisModel("LUISAPPMODEL", "LUISAPPKEY")]
-    public class RootDialog : LuisDialog<object>
+    [LuisModel("c507d394-f79f-4887-86c0-52de8e36c712", "f60cc073752e4c2b8265ce4cf31d9ed2")]
+    public partial class RootDialog : LuisDialog<object>
     {
+
+        //This method gets called before the text is sent to LUIS, so we can translate our source message here.
+        protected override async Task MessageReceived(IDialogContext context, IAwaitable<IMessageActivity> item)
+        {
+            IMessageActivity activity = await item;
+            activity.Text = await MessageTranslator.Current.TranslateMessage(activity.Text);
+
+            //Create a Translating Context to translate any messages that gets sent subsequently.
+            await base.MessageReceived(new TranslatingContext(context), item);
+        }
+
+        [Serializable]
+        public class FormOrder
+        {
+            public string OrderName { get; set; }
+            public static IForm<FormOrder> BuildForm()
+            {
+                return new FormBuilder<FormOrder>().Message("Order Form").Build();
+            }
+        }
 
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
+            if (result.Query.ToLower().Contains("test form"))
+            {
+                await context.Forward(new TranslatingFormDialog<FormOrder>(FormDialog.FromForm(FormOrder.BuildForm, FormOptions.PromptFieldsWithValues)),Resume, context.Activity, new System.Threading.CancellationToken());
+                return;
+            }
             
+            
+
             if (Regex.IsMatch(result.Query, @"\b(hello|hi|hey|how are you)\b", RegexOptions.IgnoreCase))
-                await context.PostAsync("你好。(Hello)");
+                await context.PostAsync("Hello");
             else
-                await context.PostAsync("我不懂你在说什么。(I didn't understand what you said.)");
+                await context.PostAsync("I didn't understand what you said.");
             context.Wait(this.MessageReceived);
+        }
+
+        private async Task Resume(IDialogContext context, IAwaitable<FormOrder> result)
+        {
+            await context.PostAsync("Done!");
         }
 
         [LuisIntent("GetHelp")]
@@ -35,8 +68,7 @@ namespace BotTranslation.Dialogs
         public async Task Location(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("Our address is...");
-            await context.PostAsync("我们的地区是。。。");
-
+            
             context.Wait(this.MessageReceived);
         }
 
@@ -44,7 +76,6 @@ namespace BotTranslation.Dialogs
         public async Task Food(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("There's lots you can eat.");
-            await context.PostAsync("有很多可以吃的。");
             context.Wait(this.MessageReceived);
         }
 
@@ -74,10 +105,8 @@ namespace BotTranslation.Dialogs
                     // Check if weekend or weekday
                     if (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday) {
                         await context.PostAsync("That day is a weekend, so we are open 9-11pm.");
-                        await context.PostAsync("那天是周末，所以我们营业时间9-11。");
                     } else {
                         await context.PostAsync("We open from 10-4 on that day.");
-                        await context.PostAsync("我们那天营业时间10-4。");
                     }
                 } 
             }
@@ -85,7 +114,6 @@ namespace BotTranslation.Dialogs
             {
                 // User did not specify a date
                 await context.PostAsync("We are open from 10-4pm on weekdays, and 9-11pm on weekends.");
-                await context.PostAsync("我们平日营业时间10-4pm, 周末营业时间9-11pm.");
             }
             context.Wait(this.MessageReceived);
         }
@@ -101,19 +129,16 @@ namespace BotTranslation.Dialogs
                 if (Regex.IsMatch(personTypeEntity, @"(adult)\w*", RegexOptions.IgnoreCase))
                 {
                     await context.PostAsync("Adult entrance fee is $20");
-                    await context.PostAsync("大人入门费￥20.");
                 }
                 else if (Regex.IsMatch(personTypeEntity, @"(child|kid)\w*", RegexOptions.IgnoreCase))
                 {
                     await context.PostAsync("Child entrance fee is $10");
-                    await context.PostAsync("小孩入门费￥10.");
                 }
             }
             else
             {
                 // User asked about general entry fee
                 await context.PostAsync("Adult entrance fee is $20, kids entrance fee is $10.");
-                await context.PostAsync("大人入门费￥20，小孩￥10");
             }
 
             context.Wait(this.MessageReceived);

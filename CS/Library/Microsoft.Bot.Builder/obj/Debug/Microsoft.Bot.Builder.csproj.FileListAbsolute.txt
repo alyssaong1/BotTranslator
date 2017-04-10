@@ -1,0 +1,15 @@
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.csprojResolveAssemblyReference.cache
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.ar.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.de-DE.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.cs.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.en.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.es.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.fa.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.fr.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.it.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.ja.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.nl.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.ru.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.Resource.Resources.zh-Hans.resources
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Builder\obj\Debug\Microsoft.Bot.Builder.csproj.GenerateResource.Cache
