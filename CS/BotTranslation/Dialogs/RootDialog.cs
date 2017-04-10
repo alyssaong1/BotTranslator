@@ -24,37 +24,14 @@ namespace BotTranslation.Dialogs
             await base.MessageReceived(new TranslatingContext(context), item);
         }
 
-        [Serializable]
-        public class FormOrder
-        {
-            public string OrderName { get; set; }
-            public static IForm<FormOrder> BuildForm()
-            {
-                return new FormBuilder<FormOrder>().Message("Order Form").Build();
-            }
-        }
-
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
-            if (result.Query.ToLower().Contains("test form"))
-            {
-                await context.Forward(new TranslatingFormDialog<FormOrder>(FormDialog.FromForm(FormOrder.BuildForm, FormOptions.PromptFieldsWithValues)),Resume, context.Activity, new System.Threading.CancellationToken());
-                return;
-            }
-            
-            
-
             if (Regex.IsMatch(result.Query, @"\b(hello|hi|hey|how are you)\b", RegexOptions.IgnoreCase))
                 await context.PostAsync("Hello");
             else
                 await context.PostAsync("I didn't understand what you said.");
             context.Wait(this.MessageReceived);
-        }
-
-        private async Task Resume(IDialogContext context, IAwaitable<FormOrder> result)
-        {
-            await context.PostAsync("Done!");
         }
 
         [LuisIntent("GetHelp")]
