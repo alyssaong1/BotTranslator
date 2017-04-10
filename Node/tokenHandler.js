@@ -11,7 +11,7 @@ var TRANSLATIONKEY = process.env.TRANSLATION_KEY; // Replace this with your tran
 // Put this in a separate web job if deploying to production, otherwise fine for development
 // Why I used setTimeout and not setInterval: http://www.thecodeship.com/web-development/alternative-to-javascript-evil-setinterval/
 function getToken() {
-    // do shit here
+    
     var options = {
         method: 'POST',
         url: 'https://api.cognitive.microsoft.com/sts/v1.0/issueToken?subscription-key=' + TRANSLATIONKEY
