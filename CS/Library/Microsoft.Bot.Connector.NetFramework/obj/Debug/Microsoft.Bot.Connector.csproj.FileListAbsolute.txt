@@ -1,0 +1,1 @@
+C:\Dev\BotTranslation\CS\Library\Microsoft.Bot.Connector.NetFramework\obj\Debug\Microsoft.Bot.Connector.csprojResolveAssemblyReference.cache
