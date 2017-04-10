@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="MessageTranslator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityKeys.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

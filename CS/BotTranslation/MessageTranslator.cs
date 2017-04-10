@@ -10,7 +10,7 @@ namespace BotTranslation
 {
     public class MessageTranslator
     {
-        private static string translationKey = "f6e46aeebeaf466ba1ce00fb87f6591d";
+        private static string translationKey = SecurityKeys.TranslatorKey;
         private static DateTime TokenDate;
         private static string Token;
         private static object Lock = new object();

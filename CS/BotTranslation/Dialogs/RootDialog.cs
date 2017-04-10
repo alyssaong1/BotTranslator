@@ -10,7 +10,7 @@ using Microsoft.Bot.Builder.FormFlow;
 namespace BotTranslation.Dialogs
 {
     [Serializable]
-    [LuisModel("c507d394-f79f-4887-86c0-52de8e36c712", "f60cc073752e4c2b8265ce4cf31d9ed2")]
+    [LuisModel(SecurityKeys.LUISModelKey, SecurityKeys.LUISSubscriptionKey)]
     public partial class RootDialog : LuisDialog<object>
     {
 
